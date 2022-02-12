@@ -1,0 +1,109 @@
+html,
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0px;
+    margin: 0px;
+    background-image: url(Background01.jpg);
+    background-size: cover;
+}
+
+.blured {
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    margin: 20px 80px;
+    text-align: center;
+}
+
+.main {
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 6fr 6fr;
+    grid-template-rows: 2fr 6fr 6fr;
+    grid-template-areas:
+        "header header"
+        "periods percents"
+        "fee reverse";
+}
+
+.header {
+    grid-area: header;
+}
+
+.periods {
+    grid-area: periods;
+    font-size: 20px;
+}
+
+#periods-begin {
+    margin-bottom: 30px;
+}
+
+.periods-checkbox {
+    font-size: 16px;
+    margin-top: -10px;
+    padding-bottom: 10px;
+}
+
+#periods-weekend {
+    height: min-content;
+    margin-right: -80px;
+}
+
+.result {
+    padding-top: 30px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.percents {
+    grid-area: percents;
+}
+
+#percents-summ {
+    margin: 0px 20px 10px 20px;
+}
+
+#percents-tax {
+    width: 10%;
+    margin: 0px 10px 10px 20px;
+}
+
+#percents-period {
+    width: 10%;
+    margin-left: 20px;
+}
+
+#percents-result {
+    font-size: 30px;
+}
+
+.fee {
+    grid-area: fee;
+}
+
+.reverseFee {
+    grid-area: reverse;
+}
+
+input {
+    width: 200px;
+    height: 25px;
+    border-color: whitesmoke;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    margin: 0px 20px 10px 20px;
+}
+
+select {
+    height: 20px;
+    border-color: whitesmoke;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.author {
+    text-align: center;
+    background: rgba(255, 255, 255, .4);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чисто для юриста</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header blured">
+            <h1>ЧИСТО ДЛЯ ЮРИСТА</h1>
+        </div>
+        <div class="periods blured">
+            <h4>Расчет количества дней</h4>
+            <input type="date" id="periods-begin">
+            <span>---</span>
+            <input type="date" id="periods-end">
+            <div class="periods-checkbox">
+                <input type="checkbox" id="periods-weekend">
+                <label for="periods-weekend">вычесть субботы и воскресенья</label>
+            </div>
+            <label for="periods-result">Дней:</label>
+            <div class="result" id="periods-result"></div>
+        </div>
+        <div class="percents blured">
+            <h3>Расчет процентов</h3>
+            <label for="percents-summ">Сумма:</label>
+            <input type="number" id="percents-summ">
+            <label for="percents-summ">руб.</label>
+            <br>
+            <label for="percents-tax">Процентная ставка:</label>
+            <input type="number" id="percents-tax">
+            <label for="percents-tax">%</label>
+            <label for="percents-tax-type">в</label>
+            <select name="tax" id="percents-tax-type">
+                <option disabled selected>- - - - -</option>
+                <option value="day">день</option>
+                <option value="month">месяц</option>
+                <option value="year">год</option>
+            </select>
+            <br>
+            <label for="percents-period">Количество дней:</label>
+            <input type="number" id="percents-period">
+            <div class="result" id="percents-result"></div>
+        </div>
+        <div class="fee blured">
+            <h3>Расчет пошлины</h3>
+            <label for="fee-summ">Сумма иска:</label>
+            <input type="number" onfocus="this.value=''" id="fee-summ">
+            <label for="fee-summ">руб.</label>
+            <br>
+            <input type="range" min="0" max="11000000" value="0" id="fee-range">
+            <div class="result-detail" id="fee-result-detail"></div>
+            <div class="result" id="fee-result"></div>
+        </div>
+        <div class="reverseFee blured">
+            <h3>Расчет суммы иска исходя из размера пошлины</h3>
+            <label for="reverseFee-fee">Размер пошлины:</label>
+            <input type="number" id="reverseFee-fee">
+            <label for="reverseFee-fee">руб.</label>
+            <p>Сумма иска должна быть:</p>
+            <div class="result" id="reversFee-result"></div>
+        </div>
+
+    </div>
+    <div class="author blured">by Salladoretz</div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
