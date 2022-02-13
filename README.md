@@ -1,5 +1,5 @@
 # forLawyers
-Some little usful services for russian lawyers
+Some little useful services for russian lawyers
 
 Calculate days, percents and court fee.
 
