@@ -16,9 +16,9 @@ body {
 
 .main {
     display: grid;
-    height: 90vh;
+    height: 100vh;
     grid-template-columns: 6fr 6fr;
-    grid-template-rows: 2fr 6fr 6fr 1fr;
+    grid-template-rows: 2fr 6fr 6fr 0.5fr;
     grid-template-areas:
         "header header"
         "periods percents"
@@ -29,6 +29,7 @@ body {
 
 header {
     grid-area: header;
+    margin-top: 1rem;
 }
 
 .periods {
@@ -106,6 +107,7 @@ footer {
     grid-area: footer;
     text-align: center;
     background: rgba(255, 255, 255, .4);
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 768px) {
