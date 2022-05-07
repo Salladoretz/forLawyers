@@ -56,15 +56,15 @@ const debtCalc = () => {
     if (debtTaxType === 'day') {
         debtResult = debtSumm * debtTax / 100 * debtPeriod
         percentsResult.innerHTML = `${local(debtSumm)} x ${debtTax}/100 x ${local(debtPeriod)} =
-        ${local(debtResult)} руб.`
+        ${Math.floor(debtResult).toLocaleString('ru')} руб.`
     } if (debtTaxType === 'month') {
         debtResult = debtSumm * debtTax / 100 / 30 * debtPeriod
         percentsResult.innerHTML = `${local(debtSumm)} x ${debtTax}/100/30 x ${local(debtPeriod)} =
-        ${local(debtResult)} руб.`
+        ${Math.floor(debtResult).toLocaleString('ru')} руб.`
     } if (debtTaxType === 'year') {
         debtResult = debtSumm * debtTax / 100 / 365 * debtPeriod
         percentsResult.innerHTML = `${local(debtSumm)} x ${debtTax}/100/365 x ${local(debtPeriod)} =
-        ${local(debtResult)} руб.`
+        ${Math.floor(debtResult).toLocaleString('ru')} руб.`
     }
 }
 

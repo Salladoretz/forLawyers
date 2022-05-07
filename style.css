@@ -11,22 +11,23 @@ body {
     background: rgba(255, 255, 255, .7);
     backdrop-filter: blur(15px);
     border-radius: 20px;
-    margin: 20px 80px;
     text-align: center;
 }
 
 .main {
     display: grid;
-    height: 80vh;
+    height: 90vh;
     grid-template-columns: 6fr 6fr;
-    grid-template-rows: 2fr 6fr 6fr;
+    grid-template-rows: 2fr 6fr 6fr 1fr;
     grid-template-areas:
         "header header"
         "periods percents"
-        "fee reverse";
+        "fee reverse"
+        "footer footer";
+    gap: 2rem;
 }
 
-.header {
+header {
     grid-area: header;
 }
 
@@ -41,7 +42,6 @@ body {
 
 .periods-checkbox {
     font-size: 16px;
-    margin-top: -10px;
     padding-bottom: 10px;
 }
 
@@ -87,7 +87,6 @@ body {
 }
 
 input {
-    width: 200px;
     height: 25px;
     border-color: whitesmoke;
     border-radius: 10px;
@@ -103,7 +102,17 @@ select {
     margin-left: 20px;
 }
 
-.author {
+footer {
+    grid-area: footer;
     text-align: center;
     background: rgba(255, 255, 255, .4);
+}
+
+@media screen and (max-width: 768px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        gap: 1rem;
+    }
 }
